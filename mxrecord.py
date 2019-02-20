@@ -38,7 +38,7 @@ with open("Final_file.csv", "w") as contact:
           server.login('email_add', 'Password')
           server.connect(mxRecord)
           server.ehlo('outlook.com')
-          server.mail('email_add', 'email')
+          server.mail('email_add', email)
           code, message = server.rcpt(str(email))
           server.quit()
           if code == 250:
